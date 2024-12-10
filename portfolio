@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio">
+    <title>Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #1e293b;
+            color: #f8fafc;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        header nav ul li a {
+            color: #f8fafc;
+            transition: color 0.3s;
+        }
+        header nav ul li a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to bottom, #1e293b, #3b82f6);
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+        .hero .btn {
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background-color: #60a5fa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .hero .btn:hover {
+            background-color: #2563eb;
+        }
+
+        /* Section */
+        .section {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin: 1rem;
+        }
+        .project-card p {
+            margin: 0 1rem 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .project-card .btn {
+            display: inline-block;
+            margin: 0 1rem 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #3b82f6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+        .project-card .btn:hover {
+            background-color: #2563eb;
+        }
+
+        /* About Section */
+        .about-text {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: #444;
+        }
+
+        /* Contact Section */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        form button {
+            background-color: #3b82f6;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #2563eb;
+        }
+
+        /* Footer */
+        footer {
+            padding: 1rem 0;
+            text-align: center;
+            background-color: #1e293b;
+            color: #f8fafc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Passionate about building modern web experiences.</p>
+            <button class="btn">Explore More</button>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x150" alt="Project 1">
+                <h3>Project One</h3>
+                <p>A brief description of the project goes here.</p>
+                <button class="btn">View More</button>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x150" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>A brief description of the project goes here.</p>
+                <button class="btn">View More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p class="about-text">
+            I am a web developer with expertise in HTML, CSS, JavaScript, and frameworks like React. I focus on crafting elegant solutions for modern web challenges.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Portfolio. All rights reserved.
+    </footer>
+</body>
+</html>
